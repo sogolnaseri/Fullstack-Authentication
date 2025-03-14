@@ -3,7 +3,10 @@
 A full-stack authentication system built using React (Frontend), Node.js & Express (Backend), and MongoDB (Database) with secure JWT authentication.
 
 ## 🚀 Live Demo
- Frontend: 
+<img width="807" alt="image" src="https://github.com/user-attachments/assets/4ae613b4-5774-4427-963d-0fa2dca6e966" />
+<img width="836" alt="image" src="https://github.com/user-attachments/assets/00f29077-bd83-4bb4-b239-11c9b55b8038" />
+
+
  ## 🚀 Live Demo
 🔗 [Frontend](https://fullstack-authentication-fe.vercel.app/login)  
 🔗 [Backend](https://fullstack-auth-backend.onrender.com)
