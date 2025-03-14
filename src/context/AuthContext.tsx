@@ -28,7 +28,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     const token = localStorage.getItem("token");
     if (token) {
       axios
-        .get("http://localhost:5001/api/auth/me", {
+        .get(`${process.env.REACT_APP_API_BASE_URL}/auth/me`, {
           headers: { Authorization: `Bearer ${token}` },
         })
         .then((response) => {

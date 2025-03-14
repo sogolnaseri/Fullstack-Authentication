@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useAuth } from "../context/AuthContext";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 
 const Login = () => {
@@ -21,12 +21,10 @@ const Login = () => {
     setError("");
 
     try {
+      console.log("URL is ", process.env.REACT_APP_API_BASE_URL);
       const { data } = await axios.post(
-        "http://localhost:5001/api/auth/login",
-        {
-          email,
-          password,
-        }
+        `${process.env.REACT_APP_API_BASE_URL}/auth/login`,
+        { email, password }
       );
 
       localStorage.setItem("token", data.token);
@@ -58,6 +56,9 @@ const Login = () => {
         />
         <button type="submit">Login</button>
       </form>
+      <p>
+        Don't have an account? <Link to="/signup">Signup here</Link>
+      </p>
     </div>
   );
 };
