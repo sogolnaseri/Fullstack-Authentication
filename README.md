@@ -73,8 +73,8 @@ cd backend
 npm install
 ```
 Frontend
+in the root folder:
 ```sh
-cd frontend
 npm install
 ```
 ---
