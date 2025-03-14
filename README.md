@@ -104,10 +104,8 @@ App runs on http://localhost:3000
 
 ---
 ## Deployment
-### Backend
-- Backend hosted on Render [Render](https://render.com/).
 
-### Frontend
+- Backend hosted on Render [Render](https://render.com/).
 - Frontend hosted on Vercel [Vercel](https://vercel.com/).
 - MongoDB managed with MongoDB Atlas [MongoDB Atlas](https://www.mongodb.com/)
 
