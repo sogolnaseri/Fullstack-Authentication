@@ -1,46 +1,113 @@
-# Getting Started with Create React App
+# Fullstack Authentication
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A full-stack authentication system built using React (Frontend), Node.js & Express (Backend), and MongoDB (Database) with secure JWT authentication.
 
-## Available Scripts
+## 🚀 Live Demo
+ Frontend: 
+ ## 🚀 Live Demo
+🔗 [Frontend](https://fullstack-authentication-fe.vercel.app/login)  
+🔗 [Backend](https://fullstack-auth-backend.onrender.com)
 
-In the project directory, you can run:
+---
 
-### `npm start`
+## 🛠️ Tech Stack
+### **Frontend (React)**
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- **React.js:** Component-based UI
+- **React Router:** Client-side routing
+- **Axios:** HTTP requests
+- **React Query:** Data fetching and caching
+- **React Context API:** Global state management
+- **CSS (Styled Components / Tailwind):** Styling
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+---
+### **Backend (Node.js & Express)**
 
-### `npm test`
+- **Express.js:** Backend framework
+- **RMongoDB & Mongoose:** NoSQL database
+- **bcrypt.js:** Password hashing
+- **jsonwebtoken (JWT):** Authentication
+- **dotenv:** Environment variables
+- **CORS:** Cross-Origin Resource Sharing
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+---
+### Features
 
-### `npm run build`
+- User Authentication (Signup, Login, Logout)
+- Secure JWT-based authentication
+- Lazy Loading Data with react-window
+- Protected Routes with PrivateRoute & Context API
+- API calls using Axios & React Query
+- Responsive & modern UI
+- Backend deployed on Render.com
+- Frontend deployed on Vercel
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+---
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Environment Variables
+Create a `.env` file in the backend directory and add:
+```sh
+MONGO_URI=your_mongodb_connection_string
+JWT_SECRET=your_jwt_secret
+```
+In the frontend, add a `.env` file:
+```sh
+REACT_APP_API_BASE_URL=https://fullstack-auth-backend.onrender.com/api
+```
+---
+### Setup & Run Locally
+### **1️⃣ Clone the Repository**
+```sh
+git clone https://github.com/sogolnaseri/fullstack-authentication.git
+cd fullstack-authentication
+```
+---
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### **2️⃣ Install dependencies**
+Backend
+```sh
+cd backend
+npm install
+```
+Frontend
+```sh
+cd frontend
+npm install
+```
+---
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### **3️⃣ Run the development servers**
+Backend
+```sh
+npm start
+```
+Server runs on http://localhost:5001
+Frontend
+```sh
+npm start
+```
+App runs on http://localhost:3000
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+## API Endpoints
+| Method  | Endpoint | Description | Auth Required
+| --- | ---- | ---- | ---- |
+| `POST` | `/api/auth/signup` |  Register new user | ❌ No
+| `POST` | `/api/auth/login` |  Authenticate user & get JWT | ❌ No
+| `GET` | `/api/auth/me` |  Get user details (Protected) | ✅ Yes
+| `GET` | `/api/items` |  Get lazy-loaded items | ✅ Yes
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
+## Deployment
+### Backend
+- Backend hosted on Render [Render](https://render.com/).
 
-## Learn More
+### Frontend
+- Frontend hosted on Vercel [Vercel](https://vercel.com/).
+- MongoDB managed with MongoDB Atlas [MongoDB Atlas](https://www.mongodb.com/)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+
