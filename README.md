@@ -81,13 +81,13 @@ npm install
 
 
 ### **3️⃣ Run the development servers**
-- Backend
+Backend
 ```sh
 npm start
 ```
 Server runs on http://localhost:5001
 
-- Frontend
+Frontend
 ```sh
 npm start
 ```
